@@ -1,3 +1,10 @@
 // run `node index.js` in the terminal
 
-console.log(`Hello Node.js v${process.versions.node}!`);
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.render('index.html');
+});
+
+app.listen(3000);
